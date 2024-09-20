@@ -166,64 +166,6 @@ nav ul li a:hover {
     font-style: italic;
 }
 
-/* Registration Form */
-.register {
-    background-color: #FFEBEB;
-    padding: 50px 0;
-}
-
-.register h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2.5rem;
-}
-
-form {
-    max-width: 600px;
-    margin: auto;
-    background-color: white;
-    padding: 30px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-
-.form-group input,
-.form-group select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.form-group input[readonly] {
-    background-color: #f9f9f9;
-}
-
-button {
-    width: 100%;
-    padding: 15px;
-    background-color: #FF6B6B;
-    color: white;
-    border: none;
-    font-size: 1.2rem;
-    cursor: pointer;
-    border-radius: 8px;
-}
-
-button:hover {
-    background-color: #FFB6B6;
-}
-
 /* Contact Section */
 .contact {
     padding: 50px 0;
