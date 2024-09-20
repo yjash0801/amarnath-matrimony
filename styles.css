@@ -17,6 +17,14 @@ body {
     margin: 0 auto;
 }
 
+/* Logo Fix - Responsive */
+.logo {
+    width: 200px; /* Default width for large screens */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 /* Header */
 header {
     background-color: #FF6B6B;
@@ -72,6 +80,7 @@ nav ul li a:hover {
     margin-bottom: 30px;
 }
 
+/* Adding Button for Interaction */
 .hero .btn {
     background-color: #FFD93D;
     color: #333;
@@ -122,7 +131,7 @@ nav ul li a:hover {
     font-size: 1rem;
 }
 
-/* Success Stories */
+/* Success Stories with Images */
 .success-stories {
     background-color: #FAF3E0;
     padding: 50px 0;
@@ -150,6 +159,7 @@ nav ul li a:hover {
     text-align: center;
 }
 
+/* Adding Images to Success Stories */
 .story img {
     width: 100%;
     height: auto;
@@ -164,6 +174,21 @@ nav ul li a:hover {
 
 .story p {
     font-style: italic;
+}
+
+/* FAQ Section */
+.faq {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.faq-item {
+    margin-bottom: 30px;
+}
+
+.faq-item h3 {
+    color: #FF6B6B;
+    font-size: 1.5rem;
 }
 
 /* Contact Section */
@@ -214,12 +239,6 @@ footer {
     padding: 20px 0;
     text-align: center;
 }
- .logo {
-    width: 200px; /* Default width for large screens */
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
 
 footer a {
     color: white;
@@ -231,17 +250,14 @@ footer a:hover {
 }
 
 /* Responsive Design */
-
 /* For tablets and laptops */
 @media (max-width: 1024px) {
     .container {
         width: 95%;
     }
 
-    
-
     .logo {
-        width: 150px; /* Reduce logo size for tablets */
+        width: 150px;
     }
 
     header h1 {
@@ -278,7 +294,7 @@ footer a:hover {
     }
 
     .logo {
-        width: 100px; /* Reduce logo size for mobile phones */
+        width: 100px;
     }
 
     nav ul li {
@@ -306,9 +322,5 @@ footer a:hover {
     .step, .story, .office {
         width: 90%;
         margin-bottom: 20px;
-    }
-
-    form {
-        padding: 20px;
     }
 }
