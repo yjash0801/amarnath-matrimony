@@ -1,0 +1,372 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fefefe;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: #FF6B6B;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 10px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    background: url('pexels-asadphoto-1024960.jpg') no-repeat center center/cover;
+    height: 500px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    background-color: #FFD93D;
+    color: #333;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.hero .btn:hover {
+    background-color: #FFB830;
+}
+
+/* How It Works */
+.how-it-works {
+    background-color: #FFF1E6;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.how-it-works h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.step {
+    background-color: white;
+    padding: 20px;
+    width: 45%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.step h3 {
+    color: #FF6B6B;
+    margin-bottom: 15px;
+}
+
+.step p {
+    font-size: 1rem;
+}
+
+/* Success Stories */
+.success-stories {
+    background-color: #FAF3E0;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.success-stories h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.stories {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.story {
+    background-color: white;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.story img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.story h3 {
+    color: #FF6B6B;
+    margin-bottom: 10px;
+}
+
+.story p {
+    font-style: italic;
+}
+
+/* Registration Form */
+.register {
+    background-color: #FFEBEB;
+    padding: 50px 0;
+}
+
+.register h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group input[readonly] {
+    background-color: #f9f9f9;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #FF6B6B;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: #FFB6B6;
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px 0;
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.office {
+    background-color: white;
+    padding: 20px;
+    width: 45%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.social-media {
+    text-align: center;
+}
+
+.social-media a {
+    margin: 0 15px;
+    color: #FF6B6B;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    color: #FFB830;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+ .logo {
+    width: 200px; /* Default width for large screens */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+
+/* For tablets and laptops */
+@media (max-width: 1024px) {
+    .container {
+        width: 95%;
+    }
+
+    
+
+    .logo {
+        width: 150px; /* Reduce logo size for tablets */
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .hero {
+        height: 400px;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.3rem;
+    }
+
+    .steps, .stories, .contact-info {
+        flex-direction: column;
+    }
+
+    .step, .story, .office {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        width: 100px; /* Reduce logo size for mobile phones */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero {
+        height: 300px;
+        background-size: cover;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .steps, .stories, .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .step, .story, .office {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    form {
+        padding: 20px;
+    }
+}
