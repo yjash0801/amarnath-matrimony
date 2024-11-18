@@ -171,12 +171,12 @@ nav ul li a:hover {
 
 .carousel-track {
     display: flex;
-    gap: 0; /* Removes gaps between images */
-    animation: scroll-continuous 15s linear infinite; /* Continuous scrolling animation */
+    gap: 20px; /* Adds a gap between images */
+    animation: scroll-continuous 20s linear infinite; /* Continuous scrolling animation */
 }
 
 .image-carousel img {
-    width: 25%; /* Adjust to fit multiple images in the view */
+    width: calc(100% / 5 - 20px); /* Ensures 5 images fit in the viewport with gaps */
     flex-shrink: 0; /* Prevents images from shrinking */
     height: auto;
     border-radius: 10px;
@@ -193,7 +193,7 @@ nav ul li a:hover {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%); /* Moves images completely off the screen */
+        transform: translateX(-100%); /* Moves all images completely off the screen */
     }
 }
 
