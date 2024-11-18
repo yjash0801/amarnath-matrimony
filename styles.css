@@ -283,37 +283,88 @@ nav ul li a:hover {
     }
 }
 
-/* Success Stories */
+/* Success Stories Section */
 .success-stories {
-    background-color: #FAF3E0;
-    padding: 50px 0;
+    background: linear-gradient(90deg, #FF6B6B, #FFB830); /* Matching the intro gradient */
+    padding: 60px 20px;
     text-align: center;
+    color: white;
 }
 
 .success-stories h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: white;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
 }
 
+.success-stories .intro-text {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.8); /* Subtle text color */
+}
+
+/* Stories Container */
 .stories {
     display: flex;
     justify-content: space-between;
+    gap: 20px; /* Adds spacing between stories */
     flex-wrap: wrap;
 }
 
+/* Individual Story Card */
 .story {
-    background-color: white;
-    padding: 20px;
-    width: 30%;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white for elegance */
+    padding: 30px;
+    width: calc(33.333% - 20px); /* Responsive width with gap */
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.story:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Story Image */
+.story-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover; /* Ensures image fits nicely */
+    border: 3px solid #FF6B6B; /* Add a border matching the theme */
+}
+
+/* Story Heading */
 .story h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
     color: #FF6B6B;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* Story Text */
+.story p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .story {
+        width: calc(50% - 20px); /* Adjust width for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .story {
+        width: 100%; /* Stack stories on small screens */
+    }
 }
 
 /* FAQ Section */
