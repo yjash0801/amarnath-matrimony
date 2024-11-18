@@ -172,15 +172,14 @@ nav ul li a:hover {
 .carousel-track {
     display: flex;
     gap: 20px; /* Adds spacing between images */
-    width: calc(5 * 100%); /* Fits all 5 unique images */
     animation: scroll-left-to-right 15s linear infinite; /* Smooth continuous scrolling */
 }
 
 .image-carousel img {
-    width: calc(100% / 5 - 20px); /* Ensures 5 images fit perfectly with spacing */
-    height: auto;
+    width: 18%; /* Shrinks image width to fit better on the website */
+    height: auto; /* Maintains aspect ratio */
     border-radius: 10px;
-    flex-shrink: 0; /* Prevents shrinking */
+    flex-shrink: 0; /* Prevents images from shrinking further */
     transition: transform 0.3s ease;
 }
 
