@@ -284,16 +284,16 @@ nav ul li a:hover {
 
 /* Success Stories Section */
 .success-stories {
-    background: linear-gradient(90deg, #FFD93D, #FF6B6B); /* Matching Mission & Vision gradient */
+    background-color: #FFF8EB; /* Match the background color of Mission & Vision section */
     padding: 60px 20px;
     text-align: center;
-    color: white;
+    color: #333;
 }
 
 .success-stories h2 {
     font-size: 2.8rem;
     margin-bottom: 20px;
-    color: white; /* Ensure visibility on gradient */
+    color: #FF6B6B; /* Use the standout color for the heading */
     text-transform: capitalize;
     letter-spacing: 1.5px;
 }
@@ -301,7 +301,7 @@ nav ul li a:hover {
 .success-stories .intro-text {
     font-size: 1.2rem;
     margin-bottom: 40px;
-    color: rgba(255, 255, 255, 0.8); /* Subtle text color */
+    color: #333; /* Keep the text visible and aligned with the color scheme */
 }
 
 /* Stories Container */
@@ -314,7 +314,7 @@ nav ul li a:hover {
 
 /* Individual Story Card */
 .story {
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white for elegance */
+    background-color: #FFFFFF; /* White card background for contrast */
     padding: 30px;
     width: calc(33.333% - 20px); /* Responsive width with gap */
     border-radius: 15px;
