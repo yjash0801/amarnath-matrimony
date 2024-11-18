@@ -38,6 +38,74 @@ body {
     height: auto;
 }
 
+/* General Styles */
+nav {
+    background-color: #333;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #FFB830;
+    color: #333;
+}
+
+/* Mobile-Specific Navigation Styles */
+@media (max-width: 768px) {
+    nav {
+        position: static; /* Move nav below header */
+        margin-top: 20px; /* Add spacing */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack items vertically */
+        gap: 10px;
+    }
+
+    nav ul li a {
+        display: block; /* Full width for better tapping */
+        text-align: center;
+    }
+
+    /* Hide bottom navigation bar */
+    footer nav {
+        display: none;
+    }
+}
+
+/* Larger Devices */
+@media (min-width: 768px) {
+    /* Remove bottom navigation bar */
+    footer nav {
+        display: none;
+    }
+}
+
 /* Header Section */
 header {
     font-family: 'Playfair Display', serif;
