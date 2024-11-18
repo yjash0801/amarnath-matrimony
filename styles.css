@@ -200,15 +200,15 @@ nav ul li a:hover {
 /* How It Works Section */
 .how-it-works {
     background: linear-gradient(90deg, #FF6B6B, #FFB830); /* Matching gradient */
-    padding: 70px 20px;
+    padding: 60px 20px; /* Adjusted padding for overall alignment */
     text-align: center;
     color: white; /* Ensure text contrast on gradient */
-    margin-top: 50px; /* Adjust gap between Home and How It Works */
+    margin-top: 30px; /* Reduced gap between Home and How It Works */
 }
 
 .how-it-works h2 {
     font-size: 2.8rem;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     color: white; /* Stand out on gradient */
     text-transform: uppercase;
     letter-spacing: 1.5px;
