@@ -176,7 +176,7 @@ nav ul li a:hover {
 }
 
 .image-carousel img {
-    width: 18%; /* Shrinks image width to fit better on the website */
+    width: 18%; /* Shrinks image width to fit 5 images */
     height: auto; /* Maintains aspect ratio */
     border-radius: 10px;
     flex-shrink: 0; /* Prevents images from shrinking further */
@@ -190,10 +190,10 @@ nav ul li a:hover {
 /* Animation for smooth left-to-right scrolling */
 @keyframes scroll-left-to-right {
     0% {
-        transform: translateX(0); /* Starts the carousel at its original position */
+        transform: translateX(0); /* Start fully visible */
     }
     100% {
-        transform: translateX(-100%); /* Moves the entire track to the left */
+        transform: translateX(-100%); /* Move fully out to the left */
     }
 }
 
