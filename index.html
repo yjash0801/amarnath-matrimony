@@ -36,6 +36,11 @@
             <li><a href="#mission-vision" class="smooth-scroll">Mission & Vision</a></li>
             <li><a href="#contact" class="smooth-scroll">Contact Us</a></li>
         </ul>
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </nav>
 
     <!-- Hero Section -->
@@ -233,17 +238,26 @@
     <!-- Footer -->
     <footer>
         <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#home" class="smooth-scroll">Home</a></li>
+                    <li><a href="#how-it-works" class="smooth-scroll">How It Works</a></li>
+                    <li><a href="#success-stories" class="smooth-scroll">Success Stories</a></li>
+                    <li><a href="#faq" class="smooth-scroll">FAQ's</a></li>
+                    <li><a href="#mission-vision" class="smooth-scroll">Mission & Vision</a></li>
+                    <li><a href="#contact" class="smooth-scroll">Contact Us</a></li>
+                </ul>
+            </nav>
             <p>&copy; 2024 Amarnath Reddy Matrimony. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="#about-us" class="smooth-scroll">Mission & Vision</a>
-                <a href="#contact" class="smooth-scroll">Contact</a>
-                <a href="#privacy-policy">Privacy Policy</a>
-            </div>
         </div>
     </footer>
 
     <!-- Smooth Scroll JavaScript -->
     <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('nav ul');
+            navLinks.classList.toggle('active');
+        }
         document.querySelectorAll('.smooth-scroll').forEach(link => {
             link.addEventListener('click', function (e) {
                 e.preventDefault();
