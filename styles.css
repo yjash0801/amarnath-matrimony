@@ -199,15 +199,16 @@ nav ul li a:hover {
 
 /* How It Works Section */
 .how-it-works {
-    background-color: #FFF1E6;
+    background: linear-gradient(90deg, #FF6B6B, #FFB830); /* Matching gradient */
     padding: 70px 20px;
     text-align: center;
+    color: white; /* Ensure text contrast on gradient */
 }
 
 .how-it-works h2 {
     font-size: 2.8rem;
     margin-bottom: 50px;
-    color: #FF6B6B;
+    color: white; /* Stand out on gradient */
     text-transform: uppercase;
     letter-spacing: 1.5px;
 }
@@ -221,7 +222,7 @@ nav ul li a:hover {
 
 /* Step Box */
 .step {
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
     border-radius: 15px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -250,7 +251,7 @@ nav ul li a:hover {
 .step h3 {
     font-size: 1.6rem;
     font-weight: 600;
-    color: #FF6B6B;
+    color: #FF6B6B; /* Standout color */
     margin-bottom: 15px;
     text-transform: capitalize;
 }
@@ -258,7 +259,7 @@ nav ul li a:hover {
 /* Step Description */
 .step p {
     font-size: 1rem;
-    color: #666;
+    color: #333;
     line-height: 1.6;
 }
 
