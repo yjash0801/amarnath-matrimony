@@ -172,14 +172,14 @@ nav ul li a:hover {
 .carousel-track {
     display: flex;
     gap: 20px; /* Adds spacing between images */
-    animation: scroll-left-to-right 20s linear infinite; /* Smooth continuous scrolling */
+    animation: scroll-right-to-left 20s linear infinite; /* Smooth continuous scrolling */
 }
 
 .image-carousel img {
-    width: 18%; /* Shrinks image width to fit 5 images */
-    height: auto; /* Maintains aspect ratio */
+    width: 18%; /* Adjust image size to fit 5 images */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 10px;
-    flex-shrink: 0; /* Prevents images from shrinking further */
+    flex-shrink: 0; /* Prevent images from shrinking */
     transition: transform 0.3s ease;
 }
 
@@ -187,13 +187,13 @@ nav ul li a:hover {
     transform: scale(1.05); /* Hover effect for interactivity */
 }
 
-/* Animation for smooth left-to-right scrolling */
-@keyframes scroll-left-to-right {
+/* Animation for left-to-right scrolling */
+@keyframes scroll-right-to-left {
     0% {
-        transform: translateX(0); /* Start fully visible */
+        transform: translateX(-100%); /* Start completely off-screen to the left */
     }
     100% {
-        transform: translateX(-100%); /* Move fully out to the left */
+        transform: translateX(0); /* End fully visible on the right */
     }
 }
 
