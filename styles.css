@@ -397,8 +397,16 @@ nav ul li a:hover {
 
 .faq-items {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(2, 1fr); /* Exactly 2 items in a row */
+    gap: 30px; /* Adds spacing between rows and columns */
+    justify-content: center; /* Center-align the grid items */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .faq-items {
+        grid-template-columns: 1fr; /* Stack items on smaller screens */
+    }
 }
 
 .faq-item {
