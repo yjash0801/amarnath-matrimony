@@ -200,52 +200,85 @@ nav ul li a:hover {
 /* How It Works Section */
 .how-it-works {
     background-color: #FFF1E6;
-    padding: 60px 20px;
+    padding: 70px 20px;
     text-align: center;
 }
 
 .how-it-works h2 {
     font-size: 2.8rem;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     color: #FF6B6B;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
 
+/* Steps Grid */
 .steps {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
 }
 
+/* Step Box */
 .step {
-    background: white;
+    background-color: #ffffff;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 30px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
+    padding: 30px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .step:hover {
     transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Step Icon */
 .step-icon {
     width: 60px;
     height: auto;
     margin-bottom: 20px;
+    transition: transform 0.3s ease;
 }
 
+.step:hover .step-icon {
+    transform: scale(1.1);
+}
+
+/* Step Heading */
 .step h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
     color: #FF6B6B;
-    font-size: 1.8rem;
     margin-bottom: 15px;
+    text-transform: capitalize;
 }
 
+/* Step Description */
 .step p {
     font-size: 1rem;
-    color: #333;
-    line-height: 1.5;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .how-it-works h2 {
+        font-size: 2.4rem;
+    }
+
+    .step {
+        padding: 20px;
+    }
+
+    .step h3 {
+        font-size: 1.4rem;
+    }
+
+    .step p {
+        font-size: 0.9rem;
+    }
 }
 
 /* Success Stories */
