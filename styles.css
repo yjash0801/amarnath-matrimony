@@ -24,11 +24,11 @@ body {
     height: auto;
 }
 
-/* Header */
+/* Header Section */
 header {
-    background-color: #FF6B6B;
+    background: linear-gradient(90deg, #FF6B6B, #FFB830);
     color: white;
-    padding: 20px 0;
+    padding: 40px 0;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -37,7 +37,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    text-align: center;
 }
 
 .logo-title {
@@ -46,24 +46,25 @@ header {
     gap: 20px;
 }
 
-.title-wrapper {
-    text-align: left;
-}
-
 .title-wrapper h1 {
-    font-size: 2.2rem;
-    margin-bottom: 5px;
+    font-size: 2.5rem;
+    font-weight: 700;
 }
 
 .subtitle {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: #FFE4E4;
     font-weight: 300;
+    margin-top: 5px;
 }
 
+/* Navigation Bar */
 nav {
     width: 100%;
     background-color: #333;
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
 nav ul {
@@ -71,6 +72,7 @@ nav ul {
     justify-content: center;
     list-style: none;
     padding: 15px 0;
+    margin: 0;
 }
 
 nav ul li a {
@@ -90,7 +92,7 @@ nav ul li a:hover {
 /* Hero Section */
 .hero {
     position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('pexels-asadphoto-1024960.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('pexels-asadphoto-1024960.jpg') no-repeat center center/cover;
     height: 600px;
     color: white;
     display: flex;
