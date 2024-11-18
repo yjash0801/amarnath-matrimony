@@ -214,10 +214,11 @@ nav ul li a:hover {
     nav ul {
         flex-direction: column; /* Change to vertical layout */
         align-items: center;
+        gap: 0px;
     }
 
     nav ul li {
-        margin: 10px 0; /* Add spacing between items */
+        margin: 0px; /* Add spacing between items */
     }
 }
 
