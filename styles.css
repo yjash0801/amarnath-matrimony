@@ -107,15 +107,6 @@ nav ul li a:hover {
     color: #333;
 }
 
-/* Mobile Navigation Adjustments */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-}
-
 /* Hero Section */
 .hero {
     position: relative;
@@ -166,19 +157,16 @@ nav ul li a:hover {
     background-color: #FFB830;
 }
 
-/* Mobile Hero Section Adjustments */
-@media (max-width: 768px) {
-    .hero {
-        height: 400px;
-    }
-
-    .hero h2 {
-        font-size: 2.4rem;
-    }
-
-    .hero p {
-        font-size: 1.1rem;
-    }
+/* Hero Buttons */
+.hero .btn {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 15px 30px;
+    background-color: #FFD93D;
+    color: #333;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
 }
 
 /* Sidebar Stats */
@@ -202,13 +190,6 @@ nav ul li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-weight: 600;
     color: #333;
-}
-
-/* Mobile Sidebar Adjustments */
-@media (max-width: 768px) {
-    .sidebar-stats {
-        display: none;
-    }
 }
 
 /* Image Carousel */
@@ -238,6 +219,16 @@ nav ul li a:hover {
     transform: scale(1.05);
 }
 
+/* Animation for left-to-right scrolling */
+@keyframes scroll-right-to-left {
+    0% {
+        transform: translateX(-100%); /* Start completely off-screen to the left */
+    }
+    100% {
+        transform: translateX(0); /* End fully visible on the right */
+    }
+}
+
 /* How It Works Section */
 .how-it-works {
     background: linear-gradient(90deg, #FF6B6B, #FFB830);
@@ -248,11 +239,21 @@ nav ul li a:hover {
 }
 
 .how-it-works h2 {
-    font-size: 2.4rem;
-    margin-bottom: 30px;
+    font-size: 2.4rem; /* Reduced font size */
+    margin-bottom: 30px; /* Reduced gap */
     color: white;
     text-transform: capitalize;
     letter-spacing: 1px;
+}
+
+/* Section Headings */
+section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    color: #FF6B6B;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+    margin-bottom: 40px;
 }
 
 /* Steps Grid */
@@ -262,6 +263,7 @@ nav ul li a:hover {
     gap: 30px;
 }
 
+/* Step Box */
 .step {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 12px;
@@ -271,9 +273,421 @@ nav ul li a:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Mobile Adjustments */
+.step:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Step Icon */
+.step-icon {
+    width: 50px; /* Reduced icon size */
+    height: auto;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.step:hover .step-icon {
+    transform: scale(1.1); /* Keep hover effect */
+}
+
+/* Step Heading */
+.step h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: #FF6B6B;
+    margin-bottom: 10px;
+}
+
+/* Step Description */
+.step p {
+    font-size: 0.9rem; /* Slightly smaller font size */
+    color: #333;
+    line-height: 1.4; /* Reduced line height */
+}
+
+/* Responsive Design for How It Works */
 @media (max-width: 768px) {
-    .steps {
+    .how-it-works h2 {
+        font-size: 2rem; /* Smaller heading size */
+    }
+
+    .step {
+        padding: 15px; /* Reduced padding for smaller screens */
+    }
+
+    .step h3 {
+        font-size: 1.2rem;
+    }
+
+    .step p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Success Stories Section */
+.success-stories {
+    background-color: #FFF8EB;
+    padding: 60px 20px;
+    text-align: center;
+    color: #333;
+}
+
+.success-stories h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #FF6B6B; /* Use the standout color for the heading */
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+}
+
+.success-stories .intro-text {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #333; /* Keep the text visible and aligned with the color scheme */
+}
+
+/* Stories Container */
+.stories {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Adds spacing between stories */
+    flex-wrap: wrap;
+}
+
+/* Individual Story Card */
+.story {
+    background-color: #FFFFFF; /* White card background for contrast */
+    padding: 30px;
+    width: calc(33.333% - 20px); /* Responsive width with gap */
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.story:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Story Image */
+.story-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover; /* Ensures image fits nicely */
+    border: 3px solid #FF6B6B; /* Add a border matching the theme */
+}
+
+/* Story Heading */
+.story h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #FF6B6B;
+    margin-bottom: 15px;
+}
+
+/* Story Text */
+.story p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .stories {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .stories {
+        grid-template-columns: 1fr; /* Single column for smaller screens */
+    }
+
+    .story-image {
+        width: 70px; /* Slightly reduced image size */
+        height: 70px;
+    }
+
+    .story h3 {
+        font-size: 1.2rem; /* Adjusted heading size for small screens */
+    }
+
+    .story p {
+        font-size: 0.9rem; /* Adjusted text size for small screens */
+    }
+}
+
+/* FAQ Section */
+.faq {
+    background: linear-gradient(90deg, #FF6B6B, #FFB830);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.faq h2 {
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+    color: white; /* Matches How It Works heading color */
+}
+
+.faq-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    justify-content: center; /* Center-align the grid items */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .faq-items {
+        grid-template-columns: 1fr; /* Stack items on smaller screens */
+    }
+}
+
+.faq-item {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.faq-item h3 {
+    color: #FF6B6B;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.faq-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Mission & Vision Section */
+.mission-vision {
+    background-color: #FAF3E0;
+    padding: 60px 20px;
+    text-align: center;
+    color: #333;
+}
+
+.mission-vision h2 {
+    font-size: 2.8rem;
+    color: #FF6B6B;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+}
+
+.mission-vision-content {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.mission, .vision {
+    background-color: white;
+    padding: 30px;
+    width: 45%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission:hover, .vision:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.mission h3, .vision h3 {
+    color: #FF6B6B;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.mission p, .vision p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Contact Us Section */
+.contact {
+    background: linear-gradient(90deg, #FF6B6B, #FFB830);
+    padding: 60px 20px;
+    color: white;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+    color: white; /* Matches How It Works heading color */
+}
+
+.contact .intro-text {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.9); /* Subtle contrast for intro text */
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.office {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    color: #333;
+    padding: 20px;
+    width: calc(45% - 30px);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.office:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.office h3 {
+    font-size: 1.5rem;
+    color: #FF6B6B;
+    margin-bottom: 15px;
+}
+
+.office p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.social-media {
+    margin-top: 30px;
+}
+
+.social-media h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.social-media a {
+    margin: 0 10px;
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-media a:hover {
+    background-color: white;
+    color: #FF6B6B;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .faq-items {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .mission, .vision, .office {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .faq h2, .contact h2, .mission-vision h2 {
+        font-size: 2.4rem;
+    }
+
+    .faq-item h3, .office h3, .mission h3, .vision h3 {
+        font-size: 1.4rem;
+    }
+
+    .faq-item p, .office p, .mission p, .vision p, .contact .intro-text {
+        font-size: 0.9rem;
+    }
+
+    .social-media a {
+        font-size: 1rem;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .sidebar-stats {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        top: 70%; /* Adjusted to maintain visibility */
+    }
+
+    .sidebar-left, .sidebar-right {
+        width: 80%;
+    }
+
+    .carousel-track {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 400px;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .sidebar-stats {
+        display: none; /* Hide for smaller screens */
+    }
+
+    .carousel-track img {
+        width: 50%;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .faq-items {
         grid-template-columns: 1fr;
     }
 }
