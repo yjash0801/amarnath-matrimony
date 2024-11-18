@@ -380,36 +380,209 @@ nav ul li a:hover {
     }
 }
 
-
 /* FAQ Section */
 .faq {
-    padding: 50px 0;
+    background: linear-gradient(90deg, #FF6B6B, #FFB830); /* Gradient to match the site theme */
+    color: white;
+    padding: 60px 20px;
     text-align: center;
+}
+
+.faq h2 {
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+}
+
+.faq-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.faq-item {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .faq-item h3 {
     color: #FF6B6B;
     font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
-/* Contact Section */
+.faq-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Mission & Vision Section */
+.mission-vision {
+    background-color: #FAF3E0; /* Subtle beige background */
+    padding: 60px 20px;
+    text-align: center;
+    color: #333;
+}
+
+.mission-vision h2 {
+    font-size: 2.8rem;
+    color: #FF6B6B;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+}
+
+.mission-vision-content {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.mission, .vision {
+    background-color: white;
+    padding: 30px;
+    width: 45%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission:hover, .vision:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.mission h3, .vision h3 {
+    color: #FF6B6B;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.mission p, .vision p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Contact Us Section */
 .contact {
-    padding: 50px 0;
+    background: linear-gradient(90deg, #FF6B6B, #FFB830); /* Gradient background */
+    padding: 60px 20px;
+    color: white;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+}
+
+.contact .intro-text {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.9); /* Subtle contrast for intro text */
 }
 
 .contact-info {
     display: flex;
     justify-content: space-around;
+    gap: 30px;
     flex-wrap: wrap;
 }
 
 .office {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    color: #333;
     padding: 20px;
-    width: 45%;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    width: calc(45% - 30px);
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.office:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.office h3 {
+    font-size: 1.5rem;
+    color: #FF6B6B;
+    margin-bottom: 15px;
+}
+
+.office p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.social-media {
+    margin-top: 30px;
+}
+
+.social-media h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.social-media a {
+    margin: 0 10px;
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-media a:hover {
+    background-color: white;
+    color: #FF6B6B;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .faq-items {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .mission, .vision, .office {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .faq h2, .contact h2, .mission-vision h2 {
+        font-size: 2.4rem;
+    }
+
+    .faq-item h3, .office h3, .mission h3, .vision h3 {
+        font-size: 1.4rem;
+    }
+
+    .faq-item p, .office p, .mission p, .vision p, .contact .intro-text {
+        font-size: 0.9rem;
+    }
+
+    .social-media a {
+        font-size: 1rem;
+    }
 }
 
 /* Footer */
