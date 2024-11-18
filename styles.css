@@ -28,6 +28,10 @@ body {
     line-height: 1.5;
 }
 
+.container {
+    width: 95%; /* Reduce width */
+}
+
 /* Logo */
 .logo {
     width: 110px;
@@ -72,6 +76,31 @@ header {
     color: #FFE4E4;
     font-weight: 300;
     margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+    header .logo-title {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header .logo {
+        width: 80px; /* Reduce logo size */
+    }
+
+    .title-wrapper h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .telugu-caption {
+        font-size: 1rem;
+        margin: 5px auto;
+    }
 }
 
 /* Navigation Bar */
@@ -169,6 +198,26 @@ nav ul li a:hover {
     transition: background-color 0.3s ease;
 }
 
+@media (max-width: 768px) {
+    .hero {
+        height: auto; /* Adjust height */
+        padding: 20px;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero .btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}
+
 /* Sidebar Stats */
 .sidebar-stats {
     position: absolute;
@@ -190,6 +239,13 @@ nav ul li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-weight: 600;
     color: #333;
+}
+
+/* Sidebar stats (hide on mobile) */
+@media (max-width: 768px) {
+    .sidebar-stats {
+        display: none;
+    }
 }
 
 /* Image Carousel */
@@ -217,6 +273,12 @@ nav ul li a:hover {
 
 .image-carousel img:hover {
     transform: scale(1.05);
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Animation for left-to-right scrolling */
@@ -394,6 +456,18 @@ section h2 {
     font-size: 1rem;
     color: #333;
     line-height: 1.6;
+}
+
+/* Success Stories */
+@media (max-width: 768px) {
+    .stories {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .story {
+        width: 100%; /* Full width */
+    }
 }
 
 /* Responsive Design */
@@ -685,6 +759,18 @@ footer {
     }
 }
 
+@media (max-width: 768px) {
+    footer nav ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    footer nav ul li {
+        margin: 5px 0;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .faq-items {
@@ -692,43 +778,52 @@ footer {
     }
 }
 
+/* Hamburger Menu */
 .hamburger-menu {
-    display: none; /* Hidden on larger screens */
+    display: none;
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 15px;
 }
 
 .hamburger-menu span {
     display: block;
     width: 25px;
     height: 3px;
-    background: white;
+    background-color: white;
     border-radius: 2px;
 }
 
-@media (max-width: 768px) {
-    .hamburger-menu {
-        display: flex; /* Visible on smaller screens */
-    }
+/* Hide navigation links by default on mobile */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 15px 0;
+    margin: 0;
+}
 
+@media (max-width: 768px) {
     nav ul {
-        display: none; /* Hide navigation links initially */
+        display: none;
         flex-direction: column;
+        align-items: center;
         background: #333;
         position: absolute;
         top: 50px;
         right: 0;
         width: 100%;
-        padding: 10px 0;
     }
 
     nav ul.active {
-        display: flex; /* Show menu when active */
+        display: flex;
     }
 
-    nav ul li {
-        text-align: center;
+    .hamburger-menu {
+        display: flex;
     }
 }
 
