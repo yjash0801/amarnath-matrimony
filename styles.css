@@ -665,6 +665,10 @@ section h2 {
 
 .social-media {
     margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adds spacing between buttons */
+    flex-wrap: wrap; /* Ensures buttons wrap to the next row */
 }
 
 .social-media h3 {
@@ -673,9 +677,9 @@ section h2 {
 }
 
 .social-media a {
-    margin: 0 10px;
+    margin: 10px; /* Adds margin around each button */
     color: white;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-decoration: none;
     border: 2px solid white;
     padding: 5px 10px;
@@ -686,6 +690,19 @@ section h2 {
 .social-media a:hover {
     background-color: white;
     color: #FF6B6B;
+}
+
+/* Responsive Design for Social Media Buttons */
+@media (max-width: 768px) {
+    .social-media {
+        flex-direction: column; /* Stacks buttons vertically on smaller screens */
+        align-items: center;
+    }
+
+    .social-media a {
+        width: 80%; /* Makes buttons span most of the screen width */
+        text-align: center;
+    }
 }
 
 /* Responsive Design */
