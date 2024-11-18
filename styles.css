@@ -671,10 +671,10 @@ section h2 {
     flex-wrap: wrap; /* Ensures buttons wrap to the next row */
 }
 
-.social-media h3 {
+/* .social-media h3 {
     font-size: 1.8rem;
     margin-bottom: 20px;
-}
+} */
 
 .social-media a {
     margin: 10px; /* Adds margin around each button */
