@@ -164,32 +164,36 @@ nav ul li a:hover {
 .image-carousel {
     overflow: hidden;
     position: relative;
+    width: 100%;
+    height: auto;
     margin-top: 20px;
 }
 
 .carousel-track {
     display: flex;
-    gap: 15px;
-    animation: scroll-left 10s linear infinite;
+    gap: 0; /* Removes gaps between images */
+    animation: scroll-continuous 15s linear infinite; /* Continuous scrolling animation */
 }
 
 .image-carousel img {
-    width: 25%;
+    width: 25%; /* Adjust to fit multiple images in the view */
+    flex-shrink: 0; /* Prevents images from shrinking */
+    height: auto;
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
 
 .image-carousel img:hover {
-    transform: scale(1.05); /* Zoom on hover */
+    transform: scale(1.05); /* Slight zoom-in on hover */
 }
 
-/* Animation for scrolling images */
-@keyframes scroll-left {
+/* Animation for continuous scrolling */
+@keyframes scroll-continuous {
     0% {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-100%); /* Moves images completely off the screen */
     }
 }
 
