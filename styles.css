@@ -285,47 +285,45 @@ nav ul li a:hover {
 /* Success Stories Section */
 .success-stories {
     background: linear-gradient(90deg, #FF6B6B, #FFB830); /* Matching the intro gradient */
-    padding: 40px 15px; /* Reduced padding */
+    padding: 40px 20px; /* Adjusted padding for reduced size */
     text-align: center;
     color: white;
 }
 
 .success-stories h2 {
-    font-size: 2.4rem; /* Reduced font size */
-    margin-bottom: 20px; /* Reduced gap */
+    font-size: 2.5rem; /* Slightly smaller heading */
+    margin-bottom: 20px;
     color: white;
     text-transform: capitalize;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
 }
 
 .success-stories .intro-text {
-    font-size: 1rem; /* Slightly smaller font size */
-    margin-bottom: 30px; /* Reduced gap */
+    font-size: 1.1rem; /* Slightly smaller intro text */
+    margin-bottom: 30px;
     color: rgba(255, 255, 255, 0.8); /* Subtle text color */
 }
 
 /* Stories Container */
 .stories {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px; /* Smaller gap between stories */
-    flex-wrap: wrap;
+    display: grid; /* Switched to grid layout for better responsiveness */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusts to screen size */
+    gap: 20px; /* Adds spacing between stories */
 }
 
 /* Individual Story Card */
 .story {
     background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white for elegance */
     padding: 20px; /* Reduced padding */
-    width: calc(30% - 15px); /* Slightly smaller story width */
-    border-radius: 12px; /* Reduced border radius */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .story:hover {
-    transform: translateY(-8px); /* Slightly smaller hover effect */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px); /* Slight hover lift */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Story Image */
@@ -334,36 +332,48 @@ nav ul li a:hover {
     height: 80px;
     border-radius: 50%;
     margin-bottom: 15px;
-    object-fit: cover;
-    border: 3px solid #FF6B6B; /* Matching theme */
+    object-fit: cover; /* Ensures image fits nicely */
+    border: 3px solid #FF6B6B; /* Add a border matching the theme */
 }
 
 /* Story Heading */
 .story h3 {
-    font-size: 1.4rem; /* Reduced font size */
+    font-size: 1.4rem; /* Slightly smaller heading */
     font-weight: 600;
     color: #FF6B6B;
-    margin-bottom: 10px; /* Reduced gap */
+    margin-bottom: 10px;
 }
 
 /* Story Text */
 .story p {
-    font-size: 0.9rem; /* Slightly smaller font size */
+    font-size: 0.9rem; /* Smaller paragraph text */
     color: #333;
-    line-height: 1.4; /* Reduced line height */
+    line-height: 1.5;
 }
 
-/* Responsive Design for Success Stories */
+/* Responsive Design */
 @media (max-width: 1024px) {
-    .story {
-        width: calc(45% - 15px); /* Adjust width for tablets */
+    .stories {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
     }
 }
 
 @media (max-width: 768px) {
-    .story {
-        width: 100%; /* Stack stories on small screens */
-        padding: 15px; /* Reduced padding for smaller screens */
+    .stories {
+        grid-template-columns: 1fr; /* Stack stories on small screens */
+    }
+
+    .story-image {
+        width: 70px; /* Further reduced image size for smaller screens */
+        height: 70px;
+    }
+
+    .story h3 {
+        font-size: 1.2rem; /* Adjusted heading size for small screens */
+    }
+
+    .story p {
+        font-size: 0.8rem; /* Adjusted text size for small screens */
     }
 }
 
