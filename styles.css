@@ -84,7 +84,6 @@ nav ul li a:hover {
 
     nav ul {
         flex-direction: column; /* Stack items vertically */
-        gap: 10px;
     }
 
     nav ul li a {
@@ -925,7 +924,6 @@ nav ul {
         font-size: 1rem;
         color: white;
         text-decoration: none;
-        padding: 10px 20px;
         border-radius: 5px;
     }
 
@@ -944,7 +942,7 @@ nav ul {
     }
 
     nav ul li {
-        margin: 10px 0; /* Add spacing between each link */
+        margin: 0px; /* Add spacing between each link */
     }
 
     /* Remove the three-line hamburger menu for mobile */
