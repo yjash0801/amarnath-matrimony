@@ -200,108 +200,107 @@ nav ul li a:hover {
 /* How It Works Section */
 .how-it-works {
     background: linear-gradient(90deg, #FF6B6B, #FFB830); /* Matching gradient */
-    padding: 60px 20px; /* Adjusted padding for overall alignment */
+    padding: 40px 15px; /* Reduced padding */
     text-align: center;
-    color: white; /* Ensure text contrast on gradient */
-    margin-top: 24px; /* Reduced gap between Home and How It Works */
+    color: white;
+    margin-top: 20px; /* Slightly smaller gap */
 }
 
 .how-it-works h2 {
-    font-size: 2.8rem;
-    margin-bottom: 40px;
-    color: white; /* Stand out on gradient */
+    font-size: 2.4rem; /* Reduced font size */
+    margin-bottom: 30px; /* Reduced gap */
+    color: white;
     text-transform: capitalize;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
 }
 
 /* Steps Grid */
 .steps {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Reduced size of steps */
+    gap: 30px; /* Slightly smaller gap between steps */
 }
 
 /* Step Box */
 .step {
     background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
-    border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px; /* Reduced border radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly reduced shadow */
     text-align: center;
-    padding: 30px;
+    padding: 20px; /* Reduced padding */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .step:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px); /* Slightly smaller hover effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Step Icon */
 .step-icon {
-    width: 60px;
+    width: 50px; /* Reduced icon size */
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     transition: transform 0.3s ease;
 }
 
 .step:hover .step-icon {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Keep hover effect */
 }
 
 /* Step Heading */
 .step h3 {
-    font-size: 1.6rem;
+    font-size: 1.4rem; /* Reduced font size */
     font-weight: 600;
-    color: #FF6B6B; /* Standout color */
-    margin-bottom: 15px;
-    text-transform: capitalize;
+    color: #FF6B6B;
+    margin-bottom: 10px; /* Reduced gap */
 }
 
 /* Step Description */
 .step p {
-    font-size: 1rem;
+    font-size: 0.9rem; /* Slightly smaller font size */
     color: #333;
-    line-height: 1.6;
+    line-height: 1.4; /* Reduced line height */
 }
 
-/* Responsive Design */
+/* Responsive Design for How It Works */
 @media (max-width: 768px) {
     .how-it-works h2 {
-        font-size: 2.4rem;
+        font-size: 2rem; /* Smaller heading size */
     }
 
     .step {
-        padding: 20px;
+        padding: 15px; /* Reduced padding for smaller screens */
     }
 
     .step h3 {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     .step p {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 }
 
 /* Success Stories Section */
 .success-stories {
     background: linear-gradient(90deg, #FF6B6B, #FFB830); /* Matching the intro gradient */
-    padding: 60px 20px;
+    padding: 40px 15px; /* Reduced padding */
     text-align: center;
     color: white;
 }
 
 .success-stories h2 {
-    font-size: 2.8rem;
-    margin-bottom: 20px;
+    font-size: 2.4rem; /* Reduced font size */
+    margin-bottom: 20px; /* Reduced gap */
     color: white;
     text-transform: capitalize;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
 }
 
 .success-stories .intro-text {
-    font-size: 1.2rem;
-    margin-bottom: 40px;
+    font-size: 1rem; /* Slightly smaller font size */
+    margin-bottom: 30px; /* Reduced gap */
     color: rgba(255, 255, 255, 0.8); /* Subtle text color */
 }
 
@@ -309,61 +308,62 @@ nav ul li a:hover {
 .stories {
     display: flex;
     justify-content: space-between;
-    gap: 20px; /* Adds spacing between stories */
+    gap: 15px; /* Smaller gap between stories */
     flex-wrap: wrap;
 }
 
 /* Individual Story Card */
 .story {
     background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white for elegance */
-    padding: 30px;
-    width: calc(33.333% - 20px); /* Responsive width with gap */
-    border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Reduced padding */
+    width: calc(30% - 15px); /* Slightly smaller story width */
+    border-radius: 12px; /* Reduced border radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .story:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px); /* Slightly smaller hover effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Story Image */
 .story-image {
-    width: 100px;
-    height: 100px;
+    width: 80px; /* Reduced image size */
+    height: 80px;
     border-radius: 50%;
-    margin-bottom: 20px;
-    object-fit: cover; /* Ensures image fits nicely */
-    border: 3px solid #FF6B6B; /* Add a border matching the theme */
+    margin-bottom: 15px;
+    object-fit: cover;
+    border: 3px solid #FF6B6B; /* Matching theme */
 }
 
 /* Story Heading */
 .story h3 {
-    font-size: 1.6rem;
+    font-size: 1.4rem; /* Reduced font size */
     font-weight: 600;
     color: #FF6B6B;
-    margin-bottom: 15px;
+    margin-bottom: 10px; /* Reduced gap */
 }
 
 /* Story Text */
 .story p {
-    font-size: 1rem;
+    font-size: 0.9rem; /* Slightly smaller font size */
     color: #333;
-    line-height: 1.6;
+    line-height: 1.4; /* Reduced line height */
 }
 
-/* Responsive Design */
+/* Responsive Design for Success Stories */
 @media (max-width: 1024px) {
     .story {
-        width: calc(50% - 20px); /* Adjust width for tablets */
+        width: calc(45% - 15px); /* Adjust width for tablets */
     }
 }
 
 @media (max-width: 768px) {
     .story {
         width: 100%; /* Stack stories on small screens */
+        padding: 15px; /* Reduced padding for smaller screens */
     }
 }
 
