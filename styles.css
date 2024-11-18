@@ -284,40 +284,39 @@ nav ul li a:hover {
 
 /* Success Stories Section */
 .success-stories {
-    background: linear-gradient(90deg, #FF6B6B, #FFB830); /* Matching the intro gradient */
-    padding: 50px 20px; /* Restored padding */
+    background: linear-gradient(90deg, #FFD93D, #FF6B6B); /* Matching Mission & Vision gradient */
+    padding: 60px 20px;
     text-align: center;
     color: white;
 }
 
 .success-stories h2 {
-    font-size: 2.5rem; /* Same size as before */
-    margin-bottom: 30px;
-    color: white;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: white; /* Ensure visibility on gradient */
     text-transform: capitalize;
     letter-spacing: 1.5px;
 }
 
 .success-stories .intro-text {
-    font-size: 1.1rem; /* Same size as before */
+    font-size: 1.2rem;
     margin-bottom: 40px;
     color: rgba(255, 255, 255, 0.8); /* Subtle text color */
 }
 
 /* Stories Container */
 .stories {
-    display: grid; /* Grid layout for better control */
-    grid-template-columns: repeat(3, 1fr); /* Three columns */
-    gap: 30px; /* Restored spacing between stories */
-    row-gap: 40px; /* Adds spacing between rows */
-    justify-content: center; /* Centers the content */
-    align-items: center; /* Aligns items vertically */
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Adds spacing between stories */
+    flex-wrap: wrap;
 }
 
 /* Individual Story Card */
 .story {
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
-    padding: 25px; /* Restored padding */
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white for elegance */
+    padding: 30px;
+    width: calc(33.333% - 20px); /* Responsive width with gap */
     border-radius: 15px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -331,27 +330,27 @@ nav ul li a:hover {
 
 /* Story Image */
 .story-image {
-    width: 80px; /* Restored image size */
-    height: 80px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    margin-bottom: 15px;
-    object-fit: cover;
-    border: 3px solid #FF6B6B; /* Matching theme color */
+    margin-bottom: 20px;
+    object-fit: cover; /* Ensures image fits nicely */
+    border: 3px solid #FF6B6B; /* Add a border matching the theme */
 }
 
 /* Story Heading */
 .story h3 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 600;
-    color: #FF6B6B;
-    margin-bottom: 10px;
+    color: #FF6B6B; /* Standout color */
+    margin-bottom: 15px;
 }
 
 /* Story Text */
 .story p {
     font-size: 1rem;
     color: #333;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 /* Responsive Design */
