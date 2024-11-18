@@ -19,10 +19,9 @@ body {
 
 /* Logo Fix - Responsive */
 .logo {
-    width: 200px;
+    width: 150px;
     height: auto;
-    display: block;
-    margin: 0 auto;
+    display: inline-block;
 }
 
 /* Header */
@@ -30,16 +29,30 @@ header {
     background-color: #FF6B6B;
     color: white;
     padding: 20px 0;
-    text-align: center;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 header h1 {
+    flex: 2;
     font-size: 2.5rem;
+    text-align: center;
+    margin: 0;
+}
+
+nav {
+    flex: 3;
+    text-align: right;
 }
 
 nav ul {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     list-style: none;
     margin-top: 10px;
 }
@@ -117,9 +130,9 @@ nav ul li a:hover {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 20%;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 15px;
+    width: 18%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -278,7 +291,7 @@ footer {
     }
 
     .logo {
-        width: 150px;
+        width: 120px;
     }
 
     header h1 {
