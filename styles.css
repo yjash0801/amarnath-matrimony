@@ -203,7 +203,7 @@ nav ul li a:hover {
     padding: 60px 20px; /* Adjusted padding for overall alignment */
     text-align: center;
     color: white; /* Ensure text contrast on gradient */
-    margin-top: 25px; /* Reduced gap between Home and How It Works */
+    margin-top: 24px; /* Reduced gap between Home and How It Works */
 }
 
 .how-it-works h2 {
