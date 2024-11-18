@@ -162,17 +162,35 @@ nav ul li a:hover {
 
 /* Image Carousel */
 .image-carousel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    overflow: hidden;
+    position: relative;
     margin-top: 20px;
 }
 
+.carousel-track {
+    display: flex;
+    gap: 15px;
+    animation: scroll-left 10s linear infinite;
+}
+
 .image-carousel img {
-    width: 30%;
-    height: auto;
+    width: 25%;
     border-radius: 10px;
-    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.image-carousel img:hover {
+    transform: scale(1.05); /* Zoom on hover */
+}
+
+/* Animation for scrolling images */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 /* How It Works Section */
@@ -279,7 +297,7 @@ footer {
     text-align: center;
 }
 
-/* Responsive Fixes */
+/* Responsive Design */
 @media (max-width: 1024px) {
     .sidebar-stats {
         flex-direction: column;
@@ -290,6 +308,10 @@ footer {
 
     .sidebar-left, .sidebar-right {
         width: 80%;
+    }
+
+    .carousel-track {
+        gap: 10px;
     }
 }
 
@@ -308,5 +330,9 @@ footer {
 
     .sidebar-stats {
         display: none; /* Hide for smaller screens */
+    }
+
+    .carousel-track img {
+        width: 50%;
     }
 }
