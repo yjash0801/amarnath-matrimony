@@ -19,12 +19,12 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#how-it-works">How It Works</a></li>
-                    <li><a href="#success-stories">Success Stories</a></li>
-                    <li><a href="#faq">FAQ's</a></li>
-                    <li><a href="#about-us">About Us</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#home" class="smooth-scroll">Home</a></li>
+                    <li><a href="#how-it-works" class="smooth-scroll">How It Works</a></li>
+                    <li><a href="#success-stories" class="smooth-scroll">Success Stories</a></li>
+                    <li><a href="#faq" class="smooth-scroll">FAQ's</a></li>
+                    <li><a href="#about-us" class="smooth-scroll">About Us</a></li>
+                    <li><a href="#contact" class="smooth-scroll">Contact Us</a></li>
                 </ul>
             </nav>
         </div>
@@ -166,13 +166,24 @@
         <div class="container">
             <p>&copy; 2024 Amarnath Reddy Matrimony. All rights reserved.</p>
             <div class="footer-links">
-                <a href="#about-us">About Us</a>
-                <a href="#contact">Contact</a>
+                <a href="#about-us" class="smooth-scroll">About Us</a>
+                <a href="#contact" class="smooth-scroll">Contact</a>
                 <a href="#privacy-policy">Privacy Policy</a>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Smooth Scroll JavaScript -->
+    <script>
+        document.querySelectorAll('.smooth-scroll').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>

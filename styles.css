@@ -9,6 +9,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #fefefe;
     color: #333;
+    scroll-behavior: smooth; /* Enables smooth scrolling */
 }
 
 .container {
@@ -17,11 +18,10 @@ body {
     margin: 0 auto;
 }
 
-/* Logo Fix - Responsive */
+/* Logo */
 .logo {
-    width: 150px;
+    width: 100px;
     height: auto;
-    display: inline-block;
 }
 
 /* Header */
@@ -34,13 +34,9 @@ header {
 }
 
 .header-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     gap: 15px;
 }
 
@@ -48,16 +44,6 @@ header {
     display: flex;
     align-items: center;
     gap: 20px;
-    padding: 10px;
-}
-
-.logo-container {
-    margin-bottom: 10px;
-}
-
-.logo {
-    width: 100px;
-    height: auto;
 }
 
 .title-wrapper {
@@ -77,16 +63,14 @@ header {
 
 nav {
     width: 100%;
-    background: #333;
+    background-color: #333;
 }
 
 nav ul {
     display: flex;
     justify-content: center;
-    gap: 20px;
     list-style: none;
     padding: 15px 0;
-    margin: 0;
 }
 
 nav ul li a {
@@ -94,8 +78,8 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     padding: 10px 20px;
-    transition: background-color 0.3s ease, color 0.3s ease;
     border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav ul li a:hover {
@@ -103,13 +87,14 @@ nav ul li a:hover {
     color: #333;
 }
 
-/* Updated Hero Section */
+/* Hero Section */
 .hero {
     position: relative;
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('pexels-asadphoto-1024960.jpg') no-repeat center center/cover;
     height: 600px;
     color: white;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -124,8 +109,8 @@ nav ul li a:hover {
 .hero p {
     font-size: 1.3rem;
     font-weight: 400;
-    line-height: 1.6;
     max-width: 600px;
+    line-height: 1.6;
     margin: 0 auto;
 }
 
@@ -167,33 +152,11 @@ nav ul li a:hover {
     right: 5%;
 }
 
-/* Sidebar Stats */
-.sidebar-left, .sidebar-right {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 18%;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.sidebar-left {
-    left: 5%;
-}
-
-.sidebar-right {
-    right: 5%;
-}
-
 /* Image Carousel */
 .image-carousel {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
     margin-top: 20px;
 }
 
@@ -202,19 +165,9 @@ nav ul li a:hover {
     height: auto;
     border-radius: 10px;
     margin: 0 10px;
-    animation: slide 10s infinite;
 }
 
-@keyframes slide {
-    0%, 100% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(-50%);
-    }
-}
-
-/* How It Works */
+/* How It Works Section */
 .how-it-works {
     background-color: #FFF1E6;
     padding: 50px 0;
@@ -244,10 +197,6 @@ nav ul li a:hover {
 .step h3 {
     color: #FF6B6B;
     margin-bottom: 15px;
-}
-
-.step p {
-    font-size: 1rem;
 }
 
 /* Success Stories */
@@ -281,10 +230,6 @@ nav ul li a:hover {
 .story h3 {
     color: #FF6B6B;
     margin-bottom: 10px;
-}
-
-.story p {
-    font-style: italic;
 }
 
 /* FAQ Section */
@@ -326,18 +271,16 @@ footer {
     text-align: center;
 }
 
-/* Responsive Design Updates */
+/* Responsive Design */
 @media (max-width: 1024px) {
     .header-container {
-        padding: 10px 20px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     .logo {
         width: 80px;
-    }
-
-    .title-wrapper h1 {
-        font-size: 2rem;
     }
 
     .hero {
@@ -345,17 +288,11 @@ footer {
     }
 
     .sidebar-left, .sidebar-right {
-        display: none; /* Hide sidebars for tablets */
+        display: none; /* Hide sidebars on tablets */
     }
 }
 
 @media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
     nav ul {
         flex-direction: column;
         gap: 10px;
@@ -374,6 +311,6 @@ footer {
     }
 
     .sidebar-left, .sidebar-right {
-        display: none; /* Hide sidebars for smaller screens */
+        display: none; /* Hide sidebars on smaller screens */
     }
 }
