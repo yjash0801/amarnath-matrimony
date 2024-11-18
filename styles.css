@@ -171,29 +171,30 @@ nav ul li a:hover {
 
 .carousel-track {
     display: flex;
-    gap: 20px; /* Adds a gap between images */
-    animation: scroll-left-to-right 20s linear infinite; /* Continuous scrolling animation */
+    gap: 20px; /* Adds spacing between images */
+    width: calc(5 * 100%); /* Fits all 5 unique images */
+    animation: scroll-left-to-right 15s linear infinite; /* Smooth continuous scrolling */
 }
 
 .image-carousel img {
-    width: calc(100% / 5 - 20px); /* Ensures 5 images fit in the viewport with gaps */
-    flex-shrink: 0; /* Prevents images from shrinking */
+    width: calc(100% / 5 - 20px); /* Ensures 5 images fit perfectly with spacing */
     height: auto;
     border-radius: 10px;
+    flex-shrink: 0; /* Prevents shrinking */
     transition: transform 0.3s ease;
 }
 
 .image-carousel img:hover {
-    transform: scale(1.05); /* Slight zoom-in on hover */
+    transform: scale(1.05); /* Hover effect for interactivity */
 }
 
-/* Animation for continuous left-to-right scrolling */
+/* Animation for smooth left-to-right scrolling */
 @keyframes scroll-left-to-right {
     0% {
-        transform: translateX(-100%); /* Starts from off-screen left */
+        transform: translateX(-100%); /* Starts the carousel at the left edge */
     }
     100% {
-        transform: translateX(0); /* Moves completely to the right */
+        transform: translateX(100%); /* Moves all images to the right edge */
     }
 }
 
