@@ -425,7 +425,7 @@ section h2 {
     margin-bottom: 40px;
     text-transform: capitalize;
     letter-spacing: 1.5px;
-    color: #FF6B6B; /* Updated color */
+    color: white; /* Matches How It Works heading color */
 }
 
 .faq-items {
@@ -530,6 +530,7 @@ section h2 {
     margin-bottom: 20px;
     text-transform: capitalize;
     letter-spacing: 1.5px;
+    color: white; /* Matches How It Works heading color */
 }
 
 .contact .intro-text {
