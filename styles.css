@@ -79,7 +79,6 @@ nav ul li a:hover {
 @media (max-width: 768px) {
     nav {
         position: static; /* Move nav below header */
-        margin-top: 20px; /* Add spacing */
     }
 
     nav ul {
