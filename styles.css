@@ -679,31 +679,6 @@ section h2 {
     gap: 20px; /* Adds spacing between the buttons */
 }
 
-.social-media-buttons a {
-    display: inline-block;
-    padding: 10px 20px;
-    color: white;
-    font-size: 1rem;
-    text-align: center;
-    text-decoration: none;
-    border: 2px solid white;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.social-media a {
-    display: inline-block;
-    padding: 10px 20px;
-    color: white;
-    font-size: 1rem;
-    text-align: center;
-    text-decoration: none;
-    border: 2px solid white;
-    border-radius: 5px;
-    margin: 0 10px; /* Adds spacing between buttons */
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
 .social-media a:hover {
     background-color: white;
     color: #FF6B6B;
@@ -864,6 +839,29 @@ nav ul {
 
     .hamburger-menu {
         display: flex;
+    }
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    /* Display navigation links in a vertical layout */
+    nav ul {
+        flex-direction: column; /* Change layout to vertical */
+        align-items: center;    /* Center align links */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Add spacing between each link */
+    }
+
+    /* Remove the three-line hamburger menu for mobile */
+    .hamburger-menu {
+        display: none;
+    }
+
+    /* Hide the bottom navigation bar on mobile */
+    footer nav {
+        display: none;
     }
 }
 
