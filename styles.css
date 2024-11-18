@@ -172,7 +172,7 @@ nav ul li a:hover {
 .carousel-track {
     display: flex;
     gap: 20px; /* Adds spacing between images */
-    animation: scroll-left-to-right 15s linear infinite; /* Smooth continuous scrolling */
+    animation: scroll-left-to-right 20s linear infinite; /* Smooth continuous scrolling */
 }
 
 .image-carousel img {
@@ -190,10 +190,10 @@ nav ul li a:hover {
 /* Animation for smooth left-to-right scrolling */
 @keyframes scroll-left-to-right {
     0% {
-        transform: translateX(-100%); /* Starts the carousel at the left edge */
+        transform: translateX(0); /* Starts the carousel at its original position */
     }
     100% {
-        transform: translateX(100%); /* Moves all images to the right edge */
+        transform: translateX(-100%); /* Moves the entire track to the left */
     }
 }
 
