@@ -779,6 +779,10 @@ section h2 {
 
     .social-media a {
         margin: 10px; /* Ensures consistent spacing on larger screens */
+        border: 2px solid white;
+        border-radius: 5px;
+        box-sizing: border-box;
+        padding: 10px;
     }
 }
 
@@ -808,6 +812,10 @@ section h2 {
 
     .social-media a {
         font-size: 1rem;
+        border: 2px solid white;
+        border-radius: 5px;
+        box-sizing: border-box;
+        padding: 10px;
     }
 }
 
